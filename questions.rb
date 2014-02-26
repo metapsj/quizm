@@ -1,0 +1,11 @@
+question 'Who was the first president of the USA?'
+wrong 'Fred Flinstone'
+wrong 'Martha Washington'
+wrong 'George Washington'
+wrong 'George Jetson'
+
+question 'Who is buried in Grant\'s tomb?'
+right 'U. S. Grant'
+wrong 'Carry Grant'
+wrong 'Hugh Grant'
+wrong 'W. T. Grant'
