@@ -10,4 +10,4 @@ def wrong(text)
   puts "Just read an incorrect answer: #{text}"
 end
 
-load 'question.rb'
+load 'questions.rb'
