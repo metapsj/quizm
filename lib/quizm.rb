@@ -1,6 +1,6 @@
-require_relative 'quiz'
-require_relative 'question'
-require_relative 'answer'
+require_relative 'quizm/quiz'
+require_relative 'quizm/question'
+require_relative 'quizm/answer'
 
 def question(text)
   Quiz.instance.add_question Question.new(text)
@@ -14,6 +14,6 @@ def wrong(text)
   Quiz.instance.last_question.add_answer Answer.new(text, false)
 end
 
-load 'questions.rb'
+load './quizzes/questions.rb'
 
 Quiz.instance.run_quiz
