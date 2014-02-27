@@ -2,7 +2,11 @@ require_relative 'quizm/quiz'
 require_relative 'quizm/question'
 require_relative 'quizm/answer'
 
-questions_path = './quizzes/questions.rb'
+if ARGV.size > 0
+  questions_path = ARGV.shift
+else
+  questions_path = './quizzes/questions.rb'
+end
 
 def question(text)
   Quiz.instance.add_question Question.new(text)
