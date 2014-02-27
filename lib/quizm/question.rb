@@ -11,8 +11,10 @@ class Question
   def ask
     puts ""
     puts "Question: #{@text}"
-
-    @answers.each_with_index { |answer, index| puts "#{index+1} - #{answer.text}" }
+    
+    @answers.each_with_index do |answer, index| 
+      puts "#{index+1} - #{answer.text}" 
+    end
 
     print "Enter answer: "
     answer = gets.to_i - 1
