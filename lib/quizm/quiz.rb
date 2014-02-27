@@ -18,6 +18,9 @@ class Quiz
   def run
     count = 0
     @questions.each { |q| count +=1 if q.ask }
+    
+    puts
     puts "You got #{count} answers correct out of #{@questions.size}."
+    puts 
   end
 end
