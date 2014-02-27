@@ -18,4 +18,4 @@ end
 
 load questions_path
 
-Quiz.instance.run_quiz
+Quiz.instance.run

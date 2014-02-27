@@ -15,7 +15,7 @@ class Quiz
     @questions.last
   end
 
-  def run_quiz
+  def run
     count = 0
     @questions.each { |q| count +=1 if q.ask }
     puts "You got #{count} answers correct out of #{@questions.size}."
