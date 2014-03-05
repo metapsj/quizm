@@ -1,5 +1,5 @@
 require_relative '../quizm/dsl'
 
-module Kernel
+class Object
   include Quizm::DSL 
 end
