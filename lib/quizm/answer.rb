@@ -1,8 +1,10 @@
-class Answer
-  attr_reader :text, :correct
+module Quizm
+  class Answer
+    attr_reader :text, :correct
 
-  def initialize(text, correct)
-    @text = text
-    @correct = correct
+    def initialize(text, correct)
+      @text = text
+      @correct = correct
+    end
   end
 end

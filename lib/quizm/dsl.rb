@@ -1,13 +1,13 @@
 module Kernel
-  def question(text)
-    Quiz.instance.add_question Question.new(text)
-  end
+    def question(text)
+      Quizm::Quiz.instance.add_question Quizm::Question.new(text)
+    end
 
-  def right(text)
-    Quiz.instance.last_question.add_answer Answer.new(text, true)
-  end
+    def right(text)
+      Quizm::Quiz.instance.last_question.add_answer Quizm::Answer.new(text, true)
+    end
 
-  def wrong(text)
-    Quiz.instance.last_question.add_answer Answer.new(text, false)
-  end
+    def wrong(text)
+      Quizm::Quiz.instance.last_question.add_answer Quizm::Answer.new(text, false)
+    end
 end
