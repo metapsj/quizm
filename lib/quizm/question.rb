@@ -1,26 +1,34 @@
 module Quizm
-  class Question
-    def initialize(text)
-      @text = text
-      @answers = []
+  module Question
+
+    def question(text)
+      Quiz.instance.add_question Question.new(text)
     end
 
-    def add_answer(answer)
-      @answers << answer
-    end
-
-    def ask
-      puts ""
-      puts "Question: #{@text}"
-      
-      @answers.each_with_index do |answer, index| 
-        puts "#{index+1} - #{answer.text}" 
+    class Question
+      def initialize(text)
+        @text = text
+        @answers = []
       end
 
-      print "Enter answer: "
-      answer = gets.to_i - 1
+      def add_answer(answer)
+        @answers << answer
+      end
 
-      @answers[answer].correct
+      def ask
+        puts ""
+        puts "Question: #{@text}"
+        
+        @answers.each_with_index do |answer, index| 
+          puts "#{index+1} - #{answer.text}" 
+        end
+
+        print "Enter answer: "
+        answer = gets.to_i - 1
+
+        @answers[answer].correct
+      end
     end
+
   end
 end

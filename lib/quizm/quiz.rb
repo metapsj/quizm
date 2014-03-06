@@ -1,6 +1,7 @@
 require 'singleton'
 
 module Quizm
+
   class Quiz
     include Singleton
 
@@ -25,4 +26,5 @@ module Quizm
       puts 
     end
   end
+
 end

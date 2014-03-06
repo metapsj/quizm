@@ -1,14 +1,8 @@
+require_relative 'quizm/version'
+require_relative 'quizm/application'
 require_relative 'quizm/quiz'
-require_relative 'quizm/question'
-require_relative 'quizm/answer'
-require_relative 'quizm/dsl'
+require_relative 'core_ext/object'
 
-if ARGV.size > 0
-  questions_path = ARGV.shift
-else
-  questions_path = './quizzes/questions.rb'
-end
-
-load questions_path
+app = Quizm::Application.new(ARGV)
 
 Quizm::Quiz.instance.run
