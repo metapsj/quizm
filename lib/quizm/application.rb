@@ -6,6 +6,8 @@ module Quizm
     attr_accessor :script, :script_path
 
     def initialize(argv)
+      Quiz.instance
+
       @script_path = argv.size > 0 ? argv.shift : './example/quiz_script.rb'
 
       @script = File.read(@script_path)
