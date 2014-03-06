@@ -3,14 +3,18 @@ require 'optparse'
 module Quizm
 
   class Application
-    def initialize(argv)
-      script_path = argv.size > 0 ? argv.shift : './example/quiz_script.rb'
+    attr_accessor :script, :script_path
 
-      run File.read(script_path)
+    def initialize(argv)
+      @script_path = argv.size > 0 ? argv.shift : './example/quiz_script.rb'
+
+      @script = File.read(@script_path)
     end
 
-    def run(script, filename = '__SCRIPT__')
-      self.instance_eval script, filename
+    def run
+      self.instance_eval @script, @script_path
+      
+      Quiz.instance.run
     end
 
     private 
