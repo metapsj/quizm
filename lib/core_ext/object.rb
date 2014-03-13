@@ -1,6 +1,5 @@
-require_relative '../quizm/question'
-require_relative '../quizm/answer'
+require_relative '../quizm/dsl'
 
 class Object
-  include Quizm::Question, Quizm::Answer
+  include Quizm::DSL
 end
